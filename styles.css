@@ -240,6 +240,18 @@ footer p {
 	align-items: center; 
     }
 
+    nav > div {
+        display: flex;
+        flex-direction: column; /* Stack links and flags */
+        align-items: center;
+        width: 100%; /* Ensure it spans the container */
+    }
+
+    nav > div:last-child {
+        margin-top: 10px; /* Add space between links and flags */
+        justify-content: center;
+    }
+
     nav a {
         font-size: 1em;
         padding: 10px 15px;
@@ -258,6 +270,12 @@ footer p {
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.2rem;
+    }
+
+    nav > div:last-child {
+        display: flex;
+        flex-direction: row; /* Keep flags side by side */
+        gap: 5px; /* Add spacing between flags */
     }
 
     nav a {
