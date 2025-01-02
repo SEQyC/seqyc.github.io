@@ -18,7 +18,7 @@
             <nav style="display: flex; justify-content: center; align-items: center; position: relative;">
 		    <div style="display: flex; gap: 15px;">
  		       <a href="index.html" class="active">Inicio</a>
- 		       <a href="noticias.html">Noticias</a>
+ 		       <a href="eventos.html">Eventos</a>
  		       <a href="quienes.html">Quién somos</a>
  		       <a href="recursos.html">Recursos</a>
 		       <a href="inscripcion.html">Inscripción</a>
@@ -26,10 +26,10 @@
 		    </div>
 		    <div style="position: absolute; right: 10px; display: flex;">
 		        <a href="?lang=es">
-	 	           <img src="spain.png" alt="Español" style="width: 25px; height: 25px;">
+	 	           <img src="spain.png" alt="Español" style="width: 20px; height: 20px;">
  		       </a>
 		       <a href="?lang=en">
-		            <img src="uk.png" alt="English" style="width: 25px; height: 25px;">
+		            <img src="uk.png" alt="English" style="width: 20px; height: 20px;">
 		       </a>
 		    </div>
 	    </nav>
@@ -86,5 +86,27 @@ Somos una comunidad que apoya el intercambio de conocimiento entre académicos, 
         </div>
     </div>
     </footer>
+
+    <div id="cookie-popup" class="cookie-popup">
+    	<p>Este sitio web utiliza cookies para garantizar que obtengas la mejor experiencia en nuestro sitio. No recopilamos, distribuimos ni hacemos uso de datos personales.</p>
+    	<button id="accept-cookies">Aceptar</button>
+    </div>
+
+    <script>
+    	document.addEventListener("DOMContentLoaded", () => {
+    	    const cookiePopup = document.getElementById("cookie-popup");
+    	    const acceptCookies = document.getElementById("accept-cookies");
+
+    	    if (!localStorage.getItem("cookiesAccepted")) {
+    	        cookiePopup.style.display = "block";
+    	    }
+
+    	    acceptCookies.addEventListener("click", () => {
+    	        localStorage.setItem("cookiesAccepted", "true");
+    	        cookiePopup.style.display = "none";
+    	    });
+    	});
+     </script>
+
 </body>
 </html>
