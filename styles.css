@@ -84,19 +84,6 @@ nav {
     flex-wrap: wrap; /* Wrap links on small screens */
 }
 
-/* Container for links and flags */
-nav > div:first-child {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap; /* Wrap links on small screens */
-}
-
-nav > div:last-child {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
 nav a {
     color: #800020;
     text-decoration: none;
@@ -255,25 +242,6 @@ footer p {
     nav {
         flex-direction: column;
         gap: 10px;
-	align-items: center; 
-    }
-
-    nav > div {
-        display: flex;
-        flex-direction: column; /* Stack links and flags */
-        align-items: center;
-        width: 100%; /* Ensure it spans the container */
-    }
-
-    nav > div:first-child {
-        justify-content: center; /* Center links */
-        margin-bottom: 10px; /* Add spacing below links */
-    }
-
-    nav > div:last-child {
-	gap: 10px;
-        margin-top: 10px; /* Add space between links and flags */
-        justify-content: center;
     }
 
     nav a {
@@ -301,16 +269,7 @@ footer p {
         font-size: 1.2rem;
     }
 
-    nav > div:last-child {
-        display: flex;
-        flex-direction: row; /* Keep flags side by side */
-        gap: 5px; /* Add spacing between flags */
-        width: 18px; /* Adjust flag size for small screens */
-        height: 18px;
-    }
-
     nav a {
         font-size: 0.9em;
         padding: 8px;
     }
-}
