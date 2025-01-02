@@ -15,6 +15,7 @@ html, body {
     display: flex;
     flex-direction: row;
     width: 100%;
+    flex-wrap: wrap; /* Wrap content for smaller screens */
 }
 
 /* Left box styling */
@@ -50,6 +51,8 @@ html, body {
     display: flex;
     flex-direction: column;
     flex: 1;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 /* Header styles */
@@ -223,6 +226,7 @@ footer p {
 
     .right-content {
         width: 100%;
+	padding: 0;
     }
 
     header h1 {
@@ -233,6 +237,7 @@ footer p {
     nav {
         flex-direction: column;
         gap: 10px;
+	align-items: center; 
     }
 
     nav a {
