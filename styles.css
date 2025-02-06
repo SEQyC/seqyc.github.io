@@ -212,6 +212,23 @@ footer p {
     background: #002147;
 }
 
+.form a {
+
+    background-color: #800020;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.form a:hover {
+    background-color: #a00028;
+    transform: scale(1.05);
+}
+
 /* Responsive design with media queries */
 @media (max-width: 768px) {
     .top-container {
