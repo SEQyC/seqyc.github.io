@@ -30,7 +30,7 @@
             <nav style="display: flex; justify-content: center; align-items: center; position: relative;">
  		       <a href="index.html" class="active">Inicio</a>
  		       <a href="eventos.html">Eventos</a>
- 		       <a href="quienes.html">Quién somos</a>
+ 		       <a href="quienes.html">Quienes somos</a>
  		       <a href="recursos.html">Recursos</a>
 		       <a href="inscripcion.html">Inscripción y contacto</a>
 		        <a href="?lang=es">
@@ -44,35 +44,94 @@
     </div>
 
     <section><p></p></section>
-    <section>
-	<ul>
-            <li style="font-size: 1.2rem;">
-            La Sociedad Española de Quimiometría y Cualimetría (SEQyC) está dedicada a promover la investigación y el desarrollo en estas áreas científicas.<br> 
-Somos una comunidad que apoya el intercambio de conocimiento entre académicos, profesionales y estudiantes interesados en quimiometría y cualimetría.
+    <div class="content-container">
+    <section class="seqyc-section">
+        <h2>SEQyC</h2>
+        <ul>
+            <li style="font-size: 1.1rem; line-height: 1.5;">
+                Avalando la gestión e interpretación fiable de los datos químicos
+                <br>Desde la SeQyC trabajamos para:
+                <br>· Diseminar el conocimiento de la quimiometría y la cualimetría en el ámbito académico y profesional.
+                <br>· Fomentar el uso interdisciplinar de la quimiometría, integrando nuevas perspectivas y enfoques.
+                <br>· Crear una red activa de intercambio de conocimientos y colaboración entre nuestros socios.
+                <br>· Fortalecer la colaboración con sociedades científicas internacionales.
+                <br>· Establecer una plataforma de acceso abierto.
+                <br>· Promover la formación y proyección de jóvenes investigadores.
             </li>
-	</ul>
+        </ul>
+
+	<img src="sello.png" alt="Sello SEQyC" class="seqyc-image">
     </section>
 
-    <section>
+    <section class="noticias-section">
         <h2>Noticias</h2>
-    	<div class="form">
-            <a href="https://forms.office.com/e/NH715nU0cp" target="_blank">Publicar noticia</a>
-    	</div>
-    	<section><p></p></section>
-        <div class="news-container">
-            <div class="news-box">
-                <img src="imagenes/euroanalysis.png" alt="Noticia 1">
-                <h3>Euroanalysis 2025</h3>
-            </div>
-            <div class="news-box">
-                <img src="imagenes/CCM2025.jpg" alt="Noticia 2">
-                <h3>Colloquium Chemiometricum Mediterraneum 2025</h3>
-            </div>
-            <div class="news-box">
-                <img src="descarga.jpg" alt="Noticia 3">
-                <h3>Colaboraciones Internacionales</h3>
+        
+
+        <div class="carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide">
+                    <a href="eventos.html#Euroanalysis">
+                        <img src="imagenes/euroanalysis.png" alt="Euroanalysis 2025">
+                    </a>
+                </div>
+                <div class="carousel-slide">
+                    <a href="eventos.html#CCM2025">
+                        <img src="imagenes/CCM2025.jpg" alt="Colloquium Chemiometricum Mediterraneum 2025">
+                    </a>
+                </div>
+                <div class="carousel-slide">
+                    <a href="quienes.html#ColaboracionesInternacionales">
+                        <img src="imagenes/ISC.jpg" alt="Colaboraciones Internacionales">
+                    </a>
+                </div>
             </div>
         </div>
+
+        <div class="carousel-dots">
+            <span class="carousel-dot active" data-slide="0"></span>
+            <span class="carousel-dot" data-slide="1"></span>
+            <span class="carousel-dot" data-slide="2"></span>
+        </div>
+
+	<div class="form">
+            <a href="https://forms.office.com/e/NH715nU0cp" target="_blank">Enviar noticia</a>
+        </div>
+    </section>
+</div>
+
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let index = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dots = document.querySelectorAll(".carousel-dot");
+    const wrapper = document.querySelector(".carousel-wrapper");
+    const totalSlides = slides.length;
+
+    function showSlide() {
+        wrapper.style.transform = `translateX(${-index * 100}%)`;
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+
+        index = (index + 1) % totalSlides;
+    }
+
+    // Auto-slide every 4 seconds
+    let interval = setInterval(showSlide, 4000);
+
+    // Click event for dots
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            clearInterval(interval); // Stop auto-slide when manually clicked
+            index = i;
+            showSlide();
+            interval = setInterval(showSlide, 4000); // Restart auto-slide
+        });
+    });
+
+    showSlide();
+});
+</script>
+
     </section>
     <section><p></p></section>
 
