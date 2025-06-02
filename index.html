@@ -136,27 +136,15 @@ document.addEventListener("DOMContentLoaded", function () {
     <section><p></p></section>
 
 
-    <footer>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="display: flex; gap: 20px; margin-left: 20px;">
-            <a href="https://www.linkedin.com/in/sociedad-espa%C3%B1ola-de-quimiometr%C3%ADa-y-cualimetr%C3%ADa-a93a56343/" target="_blank">
-                <img src="linkedin.png" alt="Facebook" style="width: 20px; height: 20px;">
-            </a>
-            <a href="https://www.instagram.com/seqyc_es?igsh=MWszZHcwYTljaHVlMA==" target="_blank">
-                <img src="instagram.png" alt="Twitter" style="width: 20px; height: 20px;">
-            </a>
-            <a href="https://bsky.app/profile/seqyc.bsky.social" target="_blank">
-                <img src="bluesky.png" alt="Instagram" style="width: 20px; height: 20px;">
-            </a>
-        </div>
+ <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 
-        <div>
-            <a href="mailto:seqyc.secretaria@gmail.com" style="color: white; text-decoration: none; font-size: 1rem; margin-right: 20px;">
-                seqyc.secretaria@gmail.com
-            </a>
-        </div>
-    </div>
-    </footer>
 
     <div id="cookie-popup" class="cookie-popup">
     	<p>Este sitio web utiliza cookies para garantizar que obtengas la mejor experiencia en nuestro sitio. No recopilamos, distribuimos ni hacemos uso de datos personales.</p>
