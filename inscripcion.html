@@ -60,26 +60,14 @@
 	<p><strong>Correo electrónico:</strong> <a href="mailto:seqyc.secretaria@gmail.com">seqyc.secretaria@gmail.com</a></p>
     </section>
 
-    <footer>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="display: flex; gap: 20px; margin-left: 20px;">
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="linkedin.png" alt="Facebook" style="width: 20px; height: 20px;">
-            </a>
-            <a href="https://www.twitter.com" target="_blank">
-                <img src="instagram.png" alt="Twitter" style="width: 20px; height: 20px;">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="bluesky.png" alt="Instagram" style="width: 20px; height: 20px;">
-            </a>
-        </div>
+<div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 
-        <div>
-            <a href="mailto:seqyc.secretaria@gmail.com" style="color: white; text-decoration: none; font-size: 1rem; margin-right: 20px;">
-                seqyc.secretaria@gmail.com
-            </a>
-        </div>
-    </div>
-    </footer>
 </body>
 </html>
