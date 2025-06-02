@@ -55,6 +55,18 @@ html, body {
     justify-content: center;
 }
 
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure page takes full height of viewport */
+}
+
+.content {
+    flex: 1; /* Fills remaining space between header and footer */
+    padding: 20px; /* Optional padding */
+}
+
+
 /* Header styles */
 header {
     background: linear-gradient(90deg, #002147, #004080);
@@ -131,16 +143,6 @@ address {
     border-radius: 3px;
 }
 
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure page takes full height of viewport */
-}
-
-.content {
-    flex: 1; /* Fills remaining space between header and footer */
-    padding: 20px; /* Optional padding */
-}
 
 footer {
     background: linear-gradient(90deg, #002147, #004080);
