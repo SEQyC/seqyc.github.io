@@ -301,7 +301,7 @@ footer p {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Adjust width as needed */
+    max-width: 300px; /* Adjust width as needed */
     margin: auto;
     overflow: hidden;
     border-radius: 8px;
@@ -316,14 +316,12 @@ footer p {
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
-    height: 120px;
+    height: 80px;
     overflow: hidden;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
 }
 
 .carousel-slide img {
-    max-height: 120px;
+    max-height: 80px;
     width: auto;
     display: block;
     margin: 0 auto;
