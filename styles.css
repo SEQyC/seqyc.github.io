@@ -298,31 +298,37 @@ footer p {
 }
 
 
+/* Carousel Container */
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Keeps carousel width responsive */
+    max-width: 100%;
+    height: 400px; /* Set a consistent visible height */
     margin: auto;
-    overflow: hidden; /* Hides overflow content outside the carousel */
-    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    border-radius: 8px;
 }
 
+/* Wrapper for slides */
 .carousel-wrapper {
-    display: flex; /* Align slides horizontally */
-    width: 100%; /* Container width */
-    transition: transform 0.6s ease-in-out; /* Smooth sliding animation */
+    display: flex; /* Arrange slides horizontally */
+    height: 100%; /* Match the height of .carousel */
+    transition: transform 0.6s ease-in-out;
 }
 
+/* Individual slides */
 .carousel-slide {
-    flex: 0 0 100%; /* Each slide takes full width, no shrinking or growing */
-    text-align: center; /* Centers slide content */
+    flex: 0 0 100%; /* Each slide takes full width */
+    height: 100%;   /* Match carousel height */
+    text-align: center;
 }
 
+/* Images inside the slides */
 .carousel-slide img {
-  width: 100%;
-  height: auto; /* Mantiene la proporción original */
-  object-fit: cover; /* Ajusta recorte si quieres */
-  border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Show full image without cropping */
+    border-radius: 8px;
 }
 
 /* Dots Navigation */
