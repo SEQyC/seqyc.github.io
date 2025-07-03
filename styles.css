@@ -301,27 +301,27 @@ footer p {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Adjust width as needed */
+    max-width: 100%; /* Keeps carousel width responsive */
     margin: auto;
-    overflow: hidden;
-    border-radius: 8px;
+    overflow: hidden; /* Hides overflow content outside the carousel */
+    border-radius: 8px; /* Rounded corners */
 }
 
 .carousel-wrapper {
-    display: flex;
-    width: 100%; /* Allows slides to align horizontally */
-    transition: transform 0.6s ease-in-out;
+    display: flex; /* Align slides horizontally */
+    width: 100%; /* Container width */
+    transition: transform 0.6s ease-in-out; /* Smooth sliding animation */
 }
 
 .carousel-slide {
-    flex: 0 0 100%;
-    text-align: center;
+    flex: 0 0 100%; /* Each slide takes full width, no shrinking or growing */
+    text-align: center; /* Centers slide content */
 }
 
 .carousel-slide img {
-    width: 100%;
+    width: 100%; /* Image fills the slide */
     height: 100%;
-    border-radius: 8px;
+    border-radius: 8px; /* Rounded corners on images */
 }
 
 /* Dots Navigation */
