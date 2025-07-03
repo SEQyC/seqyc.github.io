@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://seqyc.github.io/seqyc/sitemap.xml
+Sitemap: https://seqyc.github.io/sitemap.xml
