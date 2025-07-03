@@ -120,12 +120,13 @@ document.addEventListener("DOMContentLoaded", function () {
         wrapper.style.transform = `translateX(${-index * 100}%)`;
         dots.forEach(dot => dot.classList.remove("active"));
         dots[index].classList.add("active");
-
-        index = (index + 1) % totalSlides;
     }
 
     // Auto-slide every 4 seconds
-    let interval = setInterval(showSlide, 4000);
+    let interval = setInterval(() => {
+        index = (index + 1) % totalSlides;
+        showSlide();
+    }, 4000);
 
     // Click event for dots
     dots.forEach((dot, i) => {
@@ -133,12 +134,16 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(interval); // Stop auto-slide when manually clicked
             index = i;
             showSlide();
-            interval = setInterval(showSlide, 4000); // Restart auto-slide
+            interval = setInterval(() => {
+                index = (index + 1) % totalSlides;
+                showSlide();
+            }, 4000); // Restart auto-slide
         });
     });
 
     showSlide();
 });
+
 </script>
 
     </section>
