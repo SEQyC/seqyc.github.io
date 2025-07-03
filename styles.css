@@ -318,6 +318,8 @@ footer p {
     box-sizing: border-box;
     height: 120px;
     overflow: hidden;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
 }
 
 .carousel-slide img {
