@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://seqyc.github.io/seqyc/index.html</loc>
+      <loc>https://seqyc.github.io/index.html</loc>
       <lastmod>2025-01-02</lastmod>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://seqyc.github.io/seqyc/eventos.html</loc>
+      <loc>https://seqyc.github.io/eventos.html</loc>
       <lastmod>2025-01-02</lastmod>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://seqyc.github.io/seqyc/quienes.html</loc>
+      <loc>https://seqyc.github.io/quienes.html</loc>
       <lastmod>2025-01-02</lastmod>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://seqyc.github.io/seqyc/recursos.html</loc>
+      <loc>https://seqyc.github.io/recursos.html</loc>
       <lastmod>2025-01-02</lastmod>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://seqyc.github.io/seqyc/inscripcion.html</loc>
+      <loc>https://seqyc.github.io/inscripcion.html</loc>
       <lastmod>2025-01-02</lastmod>
       <priority>0.8</priority>
    </url>
