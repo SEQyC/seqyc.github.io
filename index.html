@@ -117,32 +117,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalSlides = slides.length;
 
     function showSlide() {
-        wrapper.style.transform = `translateX(${-index * 100}%)`;
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
+        wrapper.style.transform = `translateX(${-index * 100}%)`; // Move wrapper to show current slide
+        dots.forEach(dot => dot.classList.remove("active")); // Remove active class from all dots
+        dots[index].classList.add("active"); // Add active to current dot
     }
 
     // Auto-slide every 4 seconds
     let interval = setInterval(() => {
-        index = (index + 1) % totalSlides;
+        index = (index + 1) % totalSlides; // Loop index back to 0 after last slide
         showSlide();
     }, 4000);
 
     // Click event for dots
     dots.forEach((dot, i) => {
         dot.addEventListener("click", () => {
-            clearInterval(interval); // Stop auto-slide when manually clicked
+            clearInterval(interval); // Stop auto-slide when user clicks
             index = i;
             showSlide();
+            // Restart auto-slide
             interval = setInterval(() => {
                 index = (index + 1) % totalSlides;
                 showSlide();
-            }, 4000); // Restart auto-slide
+            }, 4000);
         });
     });
 
-    showSlide();
+    showSlide(); // Initial call to show first slide and active dot
 });
+
 
 </script>
 
