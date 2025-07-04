@@ -301,8 +301,8 @@ footer p {
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 1000px;
-    height: 400px; /* Altezza fissa per il carosello */
+    max-width: 100%;
+    height: 120px; /* Altezza fissa per il carosello */
     margin: 0 auto;
     overflow: hidden;
 }
