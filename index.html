@@ -115,11 +115,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set the wrapper width dynamically based on number of slides
     wrapper.style.width = `${totalSlides * 100}%`;
 
-    function showSlide() {
-        wrapper.style.transform = `translateX(${-index * 100}%)`;
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
-    }
+function showSlide() {
+	  const shiftPercentage = (100 / totalSlides) * index;
+	  wrapper.style.transform = `translateX(${-shiftPercentage}%)`;
+	  dots.forEach(dot => dot.classList.remove("active"));
+ 	  dots[index].classList.add("active");
+}
 
     // Auto-slide every 4 seconds
     let interval = setInterval(() => {
@@ -142,9 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showSlide();
 });
-
-
-
 </script>
 
     </section>
