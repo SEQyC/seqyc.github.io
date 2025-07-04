@@ -72,43 +72,7 @@
     </section>
 </div>
 
-	<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let index = 0;
-    const slides = document.querySelectorAll(".carousel-slide");
-    const dots = document.querySelectorAll(".carousel-dot");
-    const wrapper = document.querySelector(".carousel-wrapper");
-    const totalSlides = slides.length;
-
-    wrapper.style.width = `${totalSlides * 100}%`;
-
-function showSlide() {
-  const shiftPercentage = 100 * index; // not 100 / totalSlides
-  wrapper.style.transform = `translateX(-${shiftPercentage}%)`;
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[index].classList.add("active");
-}
-
-    let interval = setInterval(() => {
-      index = (index + 1) % totalSlides;
-      showSlide();
-    }, 4000);
-
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        clearInterval(interval);
-        index = i;
-        showSlide();
-        interval = setInterval(() => {
-          index = (index + 1) % totalSlides;
-          showSlide();
-        }, 4000);
-      });
-    });
-
-    showSlide();
-  });
-</script>
+	
 
     </section>
     <section><p></p></section>
