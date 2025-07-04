@@ -112,10 +112,10 @@
     const wrapper = document.querySelector(".carousel-wrapper");
     const totalSlides = slides.length;
 
-    wrapper.style.width = `${totalSlides * 25}%`;
+    wrapper.style.width = `${totalSlides * 100}%`;
 
 function showSlide() {
-  const shiftPercentage = 25 * index; // not 100 / totalSlides
+  const shiftPercentage = 100 * index; // not 100 / totalSlides
   wrapper.style.transform = `translateX(-${shiftPercentage}%)`;
   dots.forEach(dot => dot.classList.remove("active"));
   dots[index].classList.add("active");
