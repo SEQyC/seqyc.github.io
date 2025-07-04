@@ -307,17 +307,14 @@ footer p {
 
 .carousel-wrapper {
   display: flex;
+  width: 400%; /* 4 slides = 4 * 100% */
   transition: transform 0.5s ease-in-out;
-  width: 400%; /* 4 slides = 4x100% */
 }
 
 .carousel-slide {
-  min-width: 100%;
+  width: 100%; /* Each slide is full width of carousel */
+  flex: 0 0 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .carousel-slide img {
