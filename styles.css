@@ -321,7 +321,7 @@ footer p {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;        /* or contain */
+  object-fit: contain;        /* or cover */
 }
 
 
