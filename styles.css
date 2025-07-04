@@ -300,24 +300,20 @@ footer p {
 
 /* Carousel Container */
 .carousel {
-  position: relative;
-  width: 100%;
-  max-width: 200px;
-  margin: 20px auto;
+  width: 100vw;             /* or any fixed width */
   overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-/* Wrapper for all slides */
 .carousel-wrapper {
   display: flex;
+  width: 400%;              /* 4 slides × 100% */
   transition: transform 0.5s ease-in-out;
 }
 
-/* Each slide */
 .carousel-slide {
-  min-width: 100%;
+  flex: 0 0 100%;           /* Each slide takes full frame */
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -325,8 +321,9 @@ footer p {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 6px;
+  object-fit: cover;        /* or contain */
 }
+
 
 /* Dots Navigation */
 .carousel-dots {
