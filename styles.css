@@ -300,33 +300,27 @@ footer p {
 
 /* Carousel Container */
 .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 8px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-
 .carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%; 
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%; /* 4 slides = 4x100% */
 }
 
 .carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-slide img {
-    max-height: 120px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-    object-fit: contain; /* ensures image fits inside nicely */
+  width: 100%;
+  display: block;
 }
+
 
 /* Dots Navigation */
 .carousel-dots {
