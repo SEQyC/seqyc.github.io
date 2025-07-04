@@ -312,14 +312,12 @@ footer p {
 .carousel-wrapper {
     display: flex;
     transition: transform 0.5s ease;
-    width: 400%; /* 4 slides */
+    width: 100%; 
 }
 
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
-    height: 120px;
-    overflow: hidden;
 }
 
 .carousel-slide img {
