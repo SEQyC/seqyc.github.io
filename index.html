@@ -63,57 +63,44 @@
     </section>
 
     <section class="noticias-section">
-        <h2>Noticias</h2>
+  <h2>Noticias</h2>
 
-	    <div class="carousel-container">
-  <div class="carousel">
-    <div class="carousel-slide"><a href="https://www.wsc15.com/" target="_blank"><img src="imagenes/WSC.png" alt="WSC-15"></div>
-    <div class="carousel-slide"><img src="imagenes/euroanalysis.png" alt="Euroanalysis 2025"></div>
-    <div class="carousel-slide"><a href="eventos.html#CCM2025"><img src="imagenes/CCM2025.jpg" alt="CCM 2025"></div>
-    <div class="carousel-slide"><img src="imagenes/ISC.jpg" alt="Colaboraciones Internacionales"></div>
-  </div>
-</div>
-<!--<div class="mini-carousel-container">
-    <div class="carousel-track">
-        <div class="carousel-slide">
-            <a href="https://www.wsc15.com/" target="_blank">
-                <img src="imagenes/WSC.png" alt="WSC-15">
-            </a>
-        </div>
-        <div class="carousel-slide">
-            <a href="eventos.html#Euroanalysis">
-                <img src="imagenes/euroanalysis.png" alt="Euroanalysis 2025">
-            </a>
-        </div>
-        <div class="carousel-slide">
-            <a href="eventos.html#CCM2025">
-                <img src="imagenes/CCM2025.jpg" alt="CCM 2025">
-            </a>
-        </div>
-        <div class="carousel-slide">
-            <a href="quienes.html#ColaboracionesInternacionales">
-                <img src="imagenes/ISC.jpg" alt="Colaboraciones Internacionales">
-            </a>
-        </div>
-    </div>-->
+  <div class="noticias-content">
+    <!-- Other content for the section can go here if needed -->
 
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <div class="carousel-slide">
+          <a href="https://www.wsc15.com/" target="_blank">
+            <img src="imagenes/WSC.png" alt="WSC-15">
+          </a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imagenes/euroanalysis.png" alt="Euroanalysis 2025">
+        </div>
+        <div class="carousel-slide">
+          <a href="eventos.html#CCM2025">
+            <img src="imagenes/CCM2025.jpg" alt="CCM 2025">
+          </a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imagenes/ISC.jpg" alt="Colaboraciones Internacionales">
+        </div>
+      </div>
 
-    <div class="carousel-dots">
-        <span class="dot" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
-        <span class="dot" data-slide="3"></span>
+      <div class="carousel-dots" id="carousel-dots"></div>
     </div>
-</div>
+  </div>
+</section>
 
-<script>
+	    <script>
   const carousel = document.getElementById('carousel');
   const dotsContainer = document.getElementById('carousel-dots');
   const totalSlides = carousel.children.length;
   let currentIndex = 0;
   let interval;
 
-  // Create dots
+  // Create dots dynamically
   for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
@@ -140,10 +127,9 @@
 
   function resetInterval() {
     clearInterval(interval);
-    interval = setInterval(nextSlide, 5000); // 5 seconds
+    interval = setInterval(nextSlide, 5000); // every 5 seconds
   }
 
-  // Start autoplay
   resetInterval();
 </script>
 
