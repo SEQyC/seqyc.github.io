@@ -69,7 +69,7 @@
   <div class="carousel">
     <div class="carousel-slide"><a href="https://www.wsc15.com/" target="_blank"><img src="imagenes/WSC.png" alt="WSC-15"></div>
     <div class="carousel-slide"><img src="imagenes/euroanalysis.png" alt="Euroanalysis 2025"></div>
-    <div class="carousel-slide"><img src="imagenes/CCM2025.jpg" alt="CCM 2025"></div>
+    <div class="carousel-slide"><a href="eventos.html#CCM2025"><img src="imagenes/CCM2025.jpg" alt="CCM 2025"></div>
     <div class="carousel-slide"><img src="imagenes/ISC.jpg" alt="Colaboraciones Internacionales"></div>
   </div>
 </div>
@@ -106,34 +106,47 @@
     </div>
 </div>
 
-<!--<script>
-    const track = document.querySelector('.mini-carousel-container .carousel-track');
-    const slides = document.querySelectorAll('.mini-carousel-container .carousel-slide');
-    const dots = document.querySelectorAll('.mini-carousel-container .dot');
-    let currentIndex = 0;
-    const slideInterval = 4000;
+<script>
+  const carousel = document.getElementById('carousel');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const totalSlides = carousel.children.length;
+  let currentIndex = 0;
+  let interval;
 
-    function updateCarousel(index) {
-        track.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-        currentIndex = index;
-    }
-
-    let autoSlide = setInterval(() => {
-        let nextIndex = (currentIndex + 1) % slides.length;
-        updateCarousel(nextIndex);
-    }, slideInterval);
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            clearInterval(autoSlide);
-            updateCarousel(parseInt(dot.getAttribute('data-slide')));
-        });
+  // Create dots
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      currentIndex = i;
+      updateCarousel();
+      resetInterval();
     });
+    dotsContainer.appendChild(dot);
+  }
 
-    updateCarousel(0);
-</script>-->
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 5000); // 5 seconds
+  }
+
+  // Start autoplay
+  resetInterval();
+</script>
+
 	    
 	<div class="form">
             <a href="https://forms.office.com/e/NH715nU0cp" target="_blank">Enviar noticia</a>
