@@ -263,6 +263,28 @@ footer p {
     transform: scale(1.05);
 }
 
+.button-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+.btn {
+  background-color: #004080;  /* SEQyC blue */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #0059b3;
+  transform: translateY(-2px);
+}
+
 .group-header {
     cursor: pointer;
     background-color: #800020;
