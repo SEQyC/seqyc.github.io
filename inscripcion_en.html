@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscripción y contacto | SEQyC</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sociedad Española de Quimiometría y Cualimetría: Promoting chemometrics and quality metrics research.">
+    <meta name="keywords" content="SEQyC, quimiometria, cualimetria, quimiometría, cualimetría, investigación, química, chemistry, data science, data analysis, análisis de datos, ciencia de datos, chemometrics, quality metrics, research, Spain, conferences, tools">
+    <meta name="author" content="Sociedad Española de Quimiometría y Cualimetría">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sociedad Española de Quimiometría y Cualimetría">
+    <meta property="og:description" content="Promoting chemometrics and quality metrics research in Spain.">
+    <meta property="og:url" content="https://seqyc.github.io/seqyc">
+    <meta property="og:image" content="https://seqyc.github.io/seqyc/logo.png">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="top-container">
+        <div class="left-box">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="right-content">
+            <header>
+                <h1>Sociedad Española de Quimiometría y Cualimetría</h1>
+            </header>
+            <nav style="display: flex; justify-content: center; align-items: center; position: relative;">
+ 		       <a href="index.html">Inicio</a>
+ 		       <a href="eventos.html">Eventos</a>
+ 		       <a href="quienes.html">Quienes somos</a>
+ 		       <a href="recursos.html">Recursos</a>
+		       <a href="inscripcion.html" class="active">Inscripción y contacto</a>
+		        <a href="?lang=es">
+	 	           <img src="spain.png" alt="Español" style="width: 20px; height: 20px;">
+ 		       </a>
+		       <a href="?lang=en">
+		            <img src="uk.png" alt="English" style="width: 20px; height: 20px;">
+		       </a>
+	    </nav>
+        </div>
+    </div>
+
+    <section><p></p></section>
+    <section id="inscripcion">
+        <h2>Inscripción de Socios</h2>
+        <p>Desde el 5 de julio de 2024, la Junta Directiva ha abierto la inscripción de nuevos socios.</p>
+	<div class="form">
+        <a href="https://forms.office.com/e/1BC5zhXJ01" target="_blank">Inscribirse</a>
+    	</div>
+    </section>
+
+    <section><p></p></section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+	<p><strong>Correo electrónico:</strong> <a href="mailto:seqyc.secretaria@gmail.com">seqyc.secretaria@gmail.com</a></p>
+    </section>
+
+<div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
