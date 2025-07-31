@@ -106,12 +106,13 @@
   let currentIndex = 0;
 
   slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.addEventListener('click', () => {
-      currentIndex = i;
-      updateCarousel();
-    });
-    dotsContainer.appendChild(dot);
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  dot.addEventListener('click', () => {
+    currentIndex = i;
+    updateCarousel();
+  });
+  dotsContainer.appendChild(dot);
   });
 
   function updateCarousel() {
