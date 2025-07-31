@@ -310,8 +310,8 @@ footer p {
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .carousel {
@@ -331,10 +331,13 @@ footer p {
 }
 
 .carousel-slide img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  border-radius: 5px;
+  display: block;
+  margin: auto;
 }
 
 .carousel-dots {
