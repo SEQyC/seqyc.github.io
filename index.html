@@ -63,10 +63,11 @@
     </section>
 
     <section class="noticias-section">
-  <h2>Noticias</h2>
-
-  <div class="noticias-content">
-    <!-- Other content for the section can go here if needed -->
+ <div class="noticias-text">
+      <h2>Noticias</h2>
+      <!-- Aquí va el texto que ya tienes sobre quiénes somos -->
+      <!-- Ya está bien posicionado -->
+    </div>
 
     <div class="carousel-container">
       <div class="carousel" id="carousel">
@@ -87,57 +88,45 @@
           <img src="imagenes/ISC.jpg" alt="Colaboraciones Internacionales">
         </div>
       </div>
-
       <div class="carousel-dots" id="carousel-dots"></div>
     </div>
+  </div>
 
 
 <script>
   const carousel = document.getElementById('carousel');
+  const slides = document.querySelectorAll('.carousel-slide');
   const dotsContainer = document.getElementById('carousel-dots');
-  const slides = carousel.children;
-  const totalSlides = slides.length;
   let currentIndex = 0;
-  let interval;
 
-  // Crear puntos
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
     dot.addEventListener('click', () => {
       currentIndex = i;
       updateCarousel();
-      resetInterval();
     });
     dotsContainer.appendChild(dot);
-  }
+  });
 
   function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    document.querySelectorAll('.dot').forEach((dot, i) => {
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+    [...dotsContainer.children].forEach((dot, i) => {
       dot.classList.toggle('active', i === currentIndex);
     });
   }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
+  updateCarousel();
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
     updateCarousel();
-  }
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 5000);
-  }
-
-  resetInterval();
+  }, 5000);
 </script>
-
+	
     
-	<div class="form">
+<div class="form">
             <a href="https://forms.office.com/e/NH715nU0cp" target="_blank">Enviar noticia</a>
         </div>
-    </section>
 </div>
 
     </section>
