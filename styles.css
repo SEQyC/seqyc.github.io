@@ -330,10 +330,9 @@ footer p {
   background-color: #f0f0f0;
 }
 
-
 .carousel-slide img {
-  max-width: 100%;
-  max-height: 300px;
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain;
   border-radius: 10px;
 }
