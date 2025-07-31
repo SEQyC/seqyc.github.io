@@ -360,6 +360,11 @@ footer p {
   background-color: #333;
 }
 
+.enviar-noticia-centro {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
 
 /* Responsive design with media queries */
 @media (max-width: 768px) {
