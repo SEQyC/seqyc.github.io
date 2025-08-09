@@ -451,3 +451,18 @@ footer p {
         font-size: 0.9em;
         padding: 8px;
     }
+
+.evento {
+  display: flex;
+  flex-direction: column; /* apila los hijos (h2 encima, p debajo) */
+  align-items: flex-start; /* alineación a la izquierda */
+  gap: 0.5rem; /* espacio entre título y párrafo */
+}
+
+/* opcional: asegurar que h2 y p sean bloques */
+.evento h2,
+.evento p {
+  display: block;
+  width: 100%;
+}
+
