@@ -165,5 +165,50 @@
     	});
      </script>
 
+	<!-- Sparkling JIQ News Button -->
+<style>
+  .jiq-news-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    animation: sparkle 1.5s infinite, pulse 2s infinite;
+    text-decoration: none;
+  }
+
+  @keyframes sparkle {
+    0%, 100% { box-shadow: 0 0 10px #fff, 0 0 20px #ff4e50, 0 0 30px #f9d423; }
+    50% { box-shadow: 0 0 20px #fff, 0 0 40px #ff4e50, 0 0 60px #f9d423; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+  }
+
+  /* Optional: Make it fade in after page load */
+  .jiq-news-button {
+    opacity: 0;
+    animation: fadeIn 1s forwards, sparkle 1.5s infinite, pulse 2s infinite;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+</style>
+
+<a href="workshop.html" class="jiq-news-button">🌟 JIQ 2026 News 🌟</a>
+
+
 </body>
 </html>
+
