@@ -165,7 +165,7 @@
     	});
      </script>
 
-	<!-- Sparkling JIQ News Button -->
+		<!-- Sparkling JIQ News Button -->
 <style>
   .jiq-news-button {
     position: fixed;
@@ -184,6 +184,8 @@
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
     animation: sparkle 1.5s infinite, pulse 2s infinite;
     text-decoration: none;
+    max-width: 90vw; /* No más ancho que el 90% del ancho de la pantalla */
+    white-space: nowrap; /* Evita que el texto se parta en varias líneas */
   }
 
   @keyframes sparkle {
@@ -204,12 +206,22 @@
   @keyframes fadeIn {
     to { opacity: 1; }
   }
+
+	/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .jiq-news-button {
+        padding: 1rem 2rem;
+        font-size: 1.3rem;
+        border-radius: 40px;
+        max-width: 95vw; /* Un poco más ancho que el contenedor móvil */
+    }
+}
 </style>
 
 <a href="workshop.html" class="jiq-news-button">🌟 JIQ 2026 News 🌟</a>
 
-	
 </body>
 </html>
+
 
 
