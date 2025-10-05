@@ -585,10 +585,10 @@ footer p {
 .workshop-page strong.workshop-title {
   display: block;
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 3rem;
   color: #800020;
   margin: 1rem 0 0.5rem 0;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 /* 🔴 Fuerza el estilo de las fechas del Workshop */
@@ -597,6 +597,7 @@ footer p {
   font-weight: 800 !important;
   font-size: 1.25rem !important;
 }
+
 
 
 
