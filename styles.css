@@ -571,17 +571,6 @@ footer p {
 
 /* ======== Estilo especial para título y fechas ======== */
 
-.workshop-page h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #002147;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.5px;
-}
-
 .workshop-page strong.workshop-title {
   display: block;
   text-align: center;
@@ -591,12 +580,7 @@ footer p {
   font-weight: 900;
 }
 
-/* 🔴 Fuerza el estilo de las fechas del Workshop */
-.workshop-page .highlight-date {
-  color: #b30000 !important;
-  font-weight: 800 !important;
-  font-size: 1.25rem !important;
-}
+
 
 
 
