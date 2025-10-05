@@ -466,3 +466,108 @@ footer p {
   width: 100%;
 }
 
+/* ============================
+   🌟 Estilo exclusivo JIQ 2026
+   ============================ */
+.workshop-page {
+  background: linear-gradient(180deg, #f8f8fc 0%, #ffffff 100%);
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Bloque principal */
+.workshop-page .evento {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.workshop-page .evento:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.workshop-page .evento h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: #800020;
+  border-left: 5px solid #002147;
+  padding-left: 12px;
+  margin-bottom: 1rem;
+}
+
+.workshop-page .evento p {
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* Lista elegante */
+.workshop-page ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.workshop-page ul li {
+  background: #ffffff;
+  border-left: 6px solid #002147;
+  padding: 1.3rem 1.6rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.workshop-page ul li:hover {
+  transform: translateX(8px);
+  background-color: #f4f7ff;
+}
+
+.workshop-page ul li strong {
+  color: #800020;
+  font-size: 1.05rem;
+}
+
+/* Botones */
+.workshop-page .btn {
+  background: linear-gradient(90deg, #002147, #004080);
+  color: white;
+  padding: 0.9rem 1.7rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.workshop-page .btn:hover {
+  background: linear-gradient(90deg, #004080, #0059b3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de botones centrada */
+.workshop-page .button-section {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+/* Animación de entrada suave */
+.workshop-page .evento,
+.workshop-page ul li {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
