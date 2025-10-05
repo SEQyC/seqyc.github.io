@@ -569,5 +569,33 @@ footer p {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* ======== Estilo especial para título y fechas ======== */
+
+.workshop-page h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #002147;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.workshop-page strong.workshop-title {
+  display: block;
+  text-align: center;
+  font-size: 2.3rem;
+  color: #800020;
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 800;
+}
+
+.workshop-page .highlight-date {
+  color: #b30000;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
 
 
