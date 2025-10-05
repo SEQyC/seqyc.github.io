@@ -591,11 +591,14 @@ footer p {
   font-weight: 800;
 }
 
+/* 🔴 Fuerza el estilo de las fechas del Workshop */
 .workshop-page .highlight-date {
-  color: #b30000;
-  font-weight: 800;
-  font-size: 1.2rem;
+  color: #b30000 !important;
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
 }
+
+
 
 
 
