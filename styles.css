@@ -452,44 +452,17 @@ footer p {
         padding: 8px;
     }
 
-/*.evento {
+.evento {
   display: flex;
   flex-direction: column; /* apila los hijos (h2 encima, p debajo) */
-/*  align-items: flex-start; /* alineación a la izquierda */
-/*  gap: 0.5rem; /* espacio entre título y párrafo */
-/*}
-
-/* opcional: asegurar que h2 y p sean bloques */ 
-
-
-ul li {
-  background: #ffffff;
-  border-left: 6px solid #002147;
-  padding: 1rem 1.5rem;
-  margin: 1rem 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-}
-ul li:hover {
-  transform: translateX(6px);
-  background-color: #f9f9ff;
+  align-items: flex-start; /* alineación a la izquierda */
+  gap: 0.5rem; /* espacio entre título y párrafo */
 }
 
+/* opcional: asegurar que h2 y p sean bloques */
+.evento h2,
+.evento p {
+  display: block;
+  width: 100%;
+}
 
-.evento {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  margin-top: 2rem;
-  transition: transform 0.3s ease;
-}
-.evento:hover {
-  transform: translateY(-4px);
-}
-.evento h2 {
-  border-left: 5px solid #800020;
-  padding-left: 10px;
-  margin-bottom: 1rem;
-}
