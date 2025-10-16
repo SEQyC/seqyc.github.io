@@ -139,7 +139,21 @@ We hope to see many of you in Porquerolles next September.</p>
         </ul>
     </section>
 
-    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".group-header").forEach(header => {
+        header.addEventListener("click", function () {
+            let content = this.nextElementSibling;
+            content.classList.toggle("expanded");
+
+            let icon = this.querySelector(".toggle-icon");
+            icon.textContent = content.classList.contains("expanded") ? "−" : "+";
+        });
+    });
+});
+</script>
+</section>
+
 
    <div id="footer-placeholder"></div>
 <script>
@@ -152,6 +166,7 @@ We hope to see many of you in Porquerolles next September.</p>
 
 </body>
 </html>
+
 
 
 
