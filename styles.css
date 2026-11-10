@@ -390,6 +390,240 @@ footer p {
   margin-top: 1rem;
 }
 
+/* =============================================================
+   Grupos de investigación en casillas (solo quienes / quienes_en)
+   Todas las clases de este bloque son nuevas y no se usan en
+   ninguna otra página, así que el resto del sitio no cambia.
+   ============================================================= */
+
+/* ---- Parámetros ---- */
+.groups-grid {
+    --tile-min: 170px;          /* ancho mínimo de cada casilla */
+    --tile-gap: 14px;           /* separación entre casillas */
+    --burdeos: #800020;
+    --azul: #002147;
+    --borde: #e2e2ea;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--tile-min), 1fr));
+    gap: var(--tile-gap);
+    margin: 1.2rem 0 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+/* Anula el estilo genérico "ul li" del sitio para las casillas */
+.groups-grid > li {
+    background: none;
+    border-left: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* ---- Casilla ---- */
+.groups-grid > .group-card {
+    display: flex;              /* la casilla rellena toda la altura de su fila */
+    flex-direction: column;
+}
+
+.group-tile {
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1 0 auto;
+    aspect-ratio: 1 / 1;        /* cuadrada; crece si el nombre es muy largo */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 14px 12px;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-top: 4px solid var(--burdeos);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    color: #333;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.group-tile > * {
+    flex-shrink: 0;             /* nunca aplastar nombre, centro ni icono */
+}
+
+.group-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.group-tile:focus-visible {
+    outline: 3px solid #004080;
+    outline-offset: 2px;
+}
+
+.group-name {
+    color: var(--burdeos);
+    font-weight: bold;
+    font-size: 1.02rem;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+}
+
+.group-inst {
+    color: #555;
+    font-size: 0.82rem;
+    line-height: 1.3;
+}
+
+.group-icon {
+    margin-top: auto;           /* empuja el icono abajo a la derecha */
+    align-self: flex-end;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Casilla abierta */
+.group-card.is-open .group-tile {
+    background: var(--burdeos);
+    border-color: var(--burdeos);
+}
+.group-card.is-open .group-name,
+.group-card.is-open .group-inst {
+    color: #fff;
+}
+.group-card.is-open .group-icon {
+    background: #fff;
+    color: var(--burdeos);
+    font-size: 0;               /* oculta el "+" ... */
+}
+.group-card.is-open .group-icon::before {
+    content: "\2212";           /* ... y muestra "−" */
+    font-size: 1.1rem;
+}
+
+/* Ficha oculta: el script copia su contenido al panel */
+.group-info {
+    display: none;
+}
+
+/* ---- Panel desplegado (ocupa toda la fila, debajo de la casilla) ---- */
+.groups-grid > .group-detail {
+    grid-column: 1 / -1;
+    position: relative;
+    margin-top: 2px;
+    padding: 1.2rem 1.5rem 0.8rem;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-top: 4px solid var(--azul);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.groups-grid > .group-detail.is-entering {
+    animation: groupDetailIn 0.25s ease;
+}
+
+/* Flecha que apunta a la casilla abierta (posición calculada por el script) */
+.groups-grid > .group-detail::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: var(--arrow-x, 50%);
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--azul);
+}
+
+.group-detail h3 {
+    margin: 0 2.5rem 0.15rem 0;
+    color: var(--burdeos);
+    font-size: 1.3rem;
+}
+
+.group-detail .group-detail-inst {
+    margin: 0 0 0.6rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.group-detail-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    color: var(--burdeos);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.group-detail-close:hover {
+    background: #f4e6ea;
+}
+
+/* Filas de la ficha (Group, Center, Description, Contact, Website) */
+.group-detail ul li {
+    background: none;
+    border-left: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1.55;
+}
+
+.group-detail ul li:last-child {
+    border-bottom: none;
+}
+
+.group-detail em {
+    color: var(--azul);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.group-detail a {
+    color: #004080;
+}
+
+@keyframes groupDetailIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .group-tile { transition: none; }
+    .group-tile:hover { transform: none; }
+    .groups-grid > .group-detail.is-entering { animation: none; }
+}
+
+@media (max-width: 480px) {
+    .groups-grid {
+        --tile-min: 140px;
+        --tile-gap: 10px;
+    }
+    .group-name { font-size: 0.95rem; }
+    .groups-grid > .group-detail { padding: 1rem 1rem 0.6rem; }
+    .group-detail ul li { text-align: left; }   /* el justificado deja huecos en móvil */
+}
+/* ============ fin del bloque de grupos de investigación ============ */
+
 /* Responsive design with media queries */
 @media (max-width: 768px) {
     .top-container {
@@ -579,7 +813,6 @@ footer p {
   margin: 1rem 0 0.5rem 0;
   font-weight: 900;
 }
-
 
 
 
