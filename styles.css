@@ -624,6 +624,38 @@ footer p {
 }
 /* ============ fin del bloque de grupos de investigación ============ */
 
+/* =============================================================
+   Portada (index / index_en): carrusel de eventos
+   ============================================================= */
+
+/* El enlace de cada diapositiva ocupa toda la diapositiva, así el logo
+   se ajusta también en alto (si no, un logo alto dentro de un enlace
+   se salía por arriba y por abajo) */
+.carousel-slide > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Móvil y tablet (768 px o menos): columnas SEQyC y Noticias una debajo
+   de otra, y carrusel proporcional al ancho (antes: dos columnas estrechas
+   y un carrusel de 600 px de alto con los logos diminutos) */
+@media (max-width: 768px) {
+    .seqyc-section,
+    .noticias-section {
+        min-width: 100%;
+    }
+    .carousel-container {
+        height: 56vw;               /* ~5:3 respecto al ancho disponible, como en escritorio */
+    }
+    .carousel-slide {
+        box-sizing: border-box;
+        padding-bottom: 24px;       /* deja sitio a los puntos para que no tapen el logo */
+    }
+}
+
 /* Responsive design with media queries */
 @media (max-width: 768px) {
     .top-container {

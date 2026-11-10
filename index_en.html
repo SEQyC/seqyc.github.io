@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<title>Sociedad Española de Quimiometría y Cualimetría (SEQyC)</title>
-	<link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+	<link rel="stylesheet" href="styles.css?v=20261110-2"> <!-- CSS externo. Al cambiar styles.css, cambia el número de v= para que los navegadores lo descarguen de nuevo -->
 </head>
 <body>
     <div class="top-container">
@@ -72,23 +72,31 @@
 
   <div class="carousel-container">
       <div class="carousel" id="carousel">
-		<div class="carousel-slide">
-          <a href="workshop.html" target="_blank">
-            <img src="imagenes/IASIM26.png" alt="JIQ26">
+        <!-- Un bloque carousel-slide por evento, en el orden en que deben aparecer.
+             style="background-color: ..." solo hace falta si el logo no va bien sobre blanco. -->
+
+        <!-- CCM 2027: fondo igual al del logo. Añadir <a href="..."> cuando haya web del congreso -->
+        <div class="carousel-slide" style="background-color: #F2EDE7;">
+          <img src="imagenes/logo-ccm27.png" alt="XIII Colloquium Chemometricum Mediterraneum - Bilbao, 28 June - 2 July 2027">
+        </div>
+
+        <!-- EuroAnalysis 2027: fondo azul porque parte del logo es blanco -->
+        <div class="carousel-slide" style="background-color: #002147;">
+          <a href="https://euroanalysis2027.hkd.hr/" target="_blank">
+            <img src="imagenes/EuroAnalysis2027-logo.svg" alt="EuroAnalysis 2027 - Dubrovnik, 5-9 September 2027" style="width: 90%;">
           </a>
         </div>
-        <div class="carousel-slide">
-          <a href="https://congressos.urv.cat/cac-2026/" target="_blank">
-            <img src="imagenes/CAC26.jpg" alt="CAC26">
-          </a>
-        </div>
+
         <div class="carousel-slide">
           <a href="https://2026.iasim.net/" target="_blank">
-            <img src="imagenes/JIQ2026.png" alt="IASIM 26">
+            <img src="imagenes/IASIM26.png" alt="IASIM 2026">
           </a>
         </div>
+
         <div class="carousel-slide">
-          <img src="imagenes/ISC26.png" alt="International School">
+          <a href="https://congressos.urv.cat/cac-2026/" target="_blank">
+            <img src="imagenes/CAC26.jpg" alt="CAC 2026">
+          </a>
         </div>
       </div>
       <div class="carousel-dots" id="carousel-dots"></div>
@@ -207,7 +215,7 @@
   }
   @keyframes fadeIn {
     to { opacity: 1; }
-  }  -->
+  }
 
 	/* Para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
@@ -221,6 +229,8 @@
 </style>
 
 <a href="workshop.html" class="jiq-news-button">🌟 JIQ 2026 News 🌟</a>
+
+-->
 
 </body>
 </html>
